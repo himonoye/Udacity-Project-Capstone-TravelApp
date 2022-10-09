@@ -52,7 +52,6 @@ const retrieveData = async () =>{
     try {
         // Transform into JSON
         const allData = await request.json()
-        console.log(allData)
         // Write updated data to DOM elements
         document.getElementById('temp').innerHTML = Math.round(allData.temp)+ 'degrees';
         document.getElementById('content').innerHTML = allData.feel;
@@ -89,7 +88,7 @@ async function onClick(){
     if (!feel) {
         document.getElementById('feelErr').innerText = 'This can not be empty';
     }
-    
+
     if (checkZipValid(zip) && feel){
         temp = await getGeoDecoder(zip)
             .then((response) => {return response})
