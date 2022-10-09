@@ -5,7 +5,7 @@ const APIkey = '6355e9fecff4b4b4baffa22bce943115'
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-date = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+const date = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 /* Function to GET Web API Data*/
 //const webAPIData = await fetch('/')
