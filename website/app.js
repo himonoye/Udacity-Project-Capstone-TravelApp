@@ -13,6 +13,7 @@ const getWeather =  async (lat, lon) =>{
     // Pass the latitude and longtitude to the Current Wheather API
     const request = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid='+APIkey + '&units=Metric')
         .then (response => response.json())
+        // Pass the current temperature back to the main function
         .then((data) => {return data['main'].temp})
         .catch((e) => {
             console.log('error', e);
@@ -23,11 +24,11 @@ const getWeather =  async (lat, lon) =>{
 const getGeoDecoder =  async (zip) =>{
     const request = await fetch('http://api.openweathermap.org/geo/1.0/zip?zip='+ zip +',US'+ '&appid='+APIkey)
         .then (response => response.json())
+        // Pass the latitude and longtitude to the getWeather function
         .then((data) => {return getWeather(data.lat, data.lon)})
         .catch((e) => {
             console.log('error', e);
         })
-            // Pass the latitude and longtitude to the getWeather function
     return request;
     }
 
@@ -53,7 +54,7 @@ const retrieveData = async () =>{
         // Transform into JSON
         const allData = await request.json()
         // Write updated data to DOM elements
-        document.getElementById('temp').innerHTML = Math.round(allData.temp)+ 'degrees';
+        document.getElementById('temp').innerHTML = Math.round(allData.temp)+ ' degrees';
         document.getElementById('content').innerHTML = allData.feel;
         document.getElementById('date').innerHTML =allData.date;
     }
@@ -91,7 +92,6 @@ async function onClick(){
 
     if (checkZipValid(zip) && feel){
         temp = await getGeoDecoder(zip)
-            .then((response) => {return response})
             .catch((e) => {
                 console.log('error', e);
             })
