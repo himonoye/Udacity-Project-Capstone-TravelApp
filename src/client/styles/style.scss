@@ -1,0 +1,248 @@
+:root {
+    --primary: #946251;
+    --secondary: #2a5366;
+    --secondary-dark: #1f3d4d;
+    --secondary-light: #4c7487;
+    --accent: #f2f6f7;
+    --gray-dark: #444;
+    --gray: #666;
+    --gray-light: #ddd;
+    --gray-lighter: #ededed;
+    --gray-lightest: #f7f4ed;
+    --red-alert: #710000;
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body{
+    background: var(--secondary-light);
+    margin: 0;
+}
+
+#app{
+    max-width:1200px;
+    margin: 0 auto;
+    padding:50px 0 0 0;
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#form{
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--secondary);
+    color: white;
+}
+
+#tripsWrapper{
+    padding: 20px;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--secondary);
+    color: white;
+}
+
+.DepartureWrapper, .destinationWrapper {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+
+.fields {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display:block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+}
+
+.input{
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    border: white;
+    color: var(--gray-dark);
+    border-radius: 10px;
+    padding: 20px 20px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+    #app {
+        width:100%;
+        padding:40px 10px;
+    }
+
+    #form {
+        padding: 20px;
+    }
+
+    .fields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+.headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+    color: white;
+    margin: 0 0 16px 0;
+}
+
+.title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+    margin: 0 0 16px 0;
+}
+
+.sub-title {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--secondary-dark);
+}
+
+@media screen and (max-width: 1200px) {
+    .headline {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .sub-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.button-primary {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: var(--secondary);
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border: var(--secondary) solid 1px;
+    border-radius: 50px;
+}
+
+.button-primary:hover {
+    border: var(--secondary-dark) solid 1px;
+    background-color: var(--secondary-dark);
+    cursor: pointer;
+}
+
+.button-secondary {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: var(--primary) ;
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border: var(--primary) solid 1px;
+    border-radius: 50px;
+}
+
+.button-secondary:hover {
+    border: var(--secondary-dark) solid 1px;
+    background-color: var(--secondary-dark);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .button-primary {
+        width: 100%;
+    }
+
+    .button-secondary {
+        width: 100%;
+    }
+}
+
+textarea{
+    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    border: white;
+    color: var(--gray-dark);
+    border-radius: 10px;
+    padding: 20px 20px;
+    min-height: 400px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: var(--gray);
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: var(--gray-dark);
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: var(--gray-dark);
+} 
+
+#fieldErr{
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 5px;
+    color: var(--accent);
+}
+
+.material-symbols-outlined{
+    font-size: 32px;
+}

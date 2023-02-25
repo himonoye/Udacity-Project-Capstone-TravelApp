@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Journal</title>
+  <link rel="shortcut icon" href="#" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+ <body>
+    <div id="app">
+      <div class ="headline">
+        <span class="material-symbols-outlined">
+          flight
+        </span>
+        Travel Planner
+      </div>
+      <div id="body">
+        <div id="form">
+          <form>
+            <div class="DepartureWrapper">
+              <label for="departure">Enter your city and country of departure</label>
+              <div class="fields">
+                <input class="input" type="text" id="departCity" placeholder="city of departure">
+                <input class="input" type="text" id="departCountry" placeholder="country of departure">
+                <input class="input" type="datetime-local" id="departDateTime" placeholder="depature date and time">
+              </div>
+            </div>
+
+            <div class ="destinationWrapper">
+              <label for="destination">Enter your city of destination</label>
+              <div class="fields">
+                <input class="input" type="text" id="destCity" placeholder="city of destination">
+                <input class="input" type="text" id="destCountry" placeholder="country of destination">
+              </div>
+            </div>
+
+            <div id="fieldErr"></div>
+            
+            <button class="button-secondary" id="submission" type="submit" value="submit">Submit</button>
+          </form>
+        </div>
+
+        <div id="tripsWrapper">
+          <div class = "title">Your Trips</div>
+          <div id="tripList"></div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

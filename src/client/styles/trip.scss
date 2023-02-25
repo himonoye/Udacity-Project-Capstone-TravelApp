@@ -1,0 +1,164 @@
+#tripList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tripItem {
+    display: flex;
+    gap: 20px;
+    background: white;
+    color: var(--gray-dark);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.departDateTime {
+    text-align: center;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: var(--accent);
+}
+
+.departMonth, .departDate {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 700;
+    TEXT-TRANSFORM: UPPERCASE;
+}
+
+.travelInfo {
+    display: block;
+    padding: 20px 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.propLabel {
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 768px){
+    .travelInfo {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .tripItem {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .departDateTime {
+        justify-content: center;
+        display: flex;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .departMonth, .departDate {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+.tripDeparture, .tripDestination {
+    background-color: var(--gray-lightest);
+    padding: 5px 10px;
+    color: var(--secondary-dark);
+    border-radius: 5px;
+}
+
+.xDaysAway {
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 5px;
+    background-color: var(--accent);
+    font-weight: 600;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px){
+    .xDaysAway {
+        position: relative;
+        margin: 0 0 20px 0;
+    }
+}
+
+.allWeatherWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--accent);
+    border-radius: 5px;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.weatherWrapper {
+    width:100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.weatherLabels {
+    width: 50px;
+    margin: 15px 20px;
+}
+
+.weatherIcon {
+    width: 48px;
+}
+
+.tripImageWrapper {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: 65px 0 0 0;
+    border-radius: 5px;
+}
+
+.tripImage {
+    height: 400px;
+}
+
+.pixaBayLogoWrapper {
+    display: flex;
+    padding: 10px 0;
+    justify-content: end;
+}
+
+.pixaBayLogo {
+    height: 15px
+}
+
+@media screen and (max-width: 768px){
+    .tripImageWrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    .allWeatherWrapper {
+        margin: 20px 0 0 0;
+    }
+
+    .weatherLabels {
+        width: 50%;
+    }
+}
